@@ -1,0 +1,92 @@
+@import '../../sass/abstract/function.scss';
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+// font-family: 'Fraunces', serif;
+// font-family: 'Montserrat', sans-serif;
+
+.productCard{
+    @include flex(row,flex-start,flex-start,nowrap);
+    @include size(600px,450px);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #FFF;
+
+    .container_img{
+        @include size(50%,450px);            
+    }
+
+    article{
+        @include flex(column,space-between);
+        max-width: 50%;
+        padding: 2rem 1.875rem;
+        min-height: 100%;
+
+        h2{
+            font-family: 'Montserrat', serif;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 12px;
+            letter-spacing: 0.5rem;
+            color: #6C7289;
+        }
+
+
+        h1{
+            font-size: 2rem;
+            line-height: 2rem;
+            text-transform: capitalize;
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+        }
+
+        .description{
+            font-size: 14px;
+            line-height: 23px;
+            font-family: 'Montserrat', serif;
+            font-weight: 500;
+            color: #6C7289;
+        }
+
+        .container_price{
+            width: 100%;
+            @include flex(row,flex-start,center);
+
+            .price{
+                font-size: 2rem;
+                margin : 0 1.25rem 0 0;
+                font-weight: 700;
+                color : #3D8168;
+                font-family: 'Fraunces', serif;
+            }
+
+            .solded{
+                text-decoration:line-through;
+                color : #6C7289;
+                font-family: 'Montserrat', serif;
+                font-weight: 500;
+            }
+
+        }
+
+        button{
+            @include size(100%,48px);
+            border-radius: 8px;
+            border: none;
+            background-color: #3D8168;
+            color : white;
+            font-size : 14px;
+            font-family: 'Montserrat', serif;
+            font-weight: 700;
+            @include flexCenter();
+            span{
+                @include flexCenter();
+            }
+            svg{
+                margin : 0 12px 0 0;
+                @include size(1rem);
+            }
+        }
+    }
+}
